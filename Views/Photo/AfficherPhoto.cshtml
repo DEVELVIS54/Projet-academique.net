@@ -1,0 +1,15 @@
+﻿@model TEST1WEB.Models.Photo
+
+@{
+    ViewBag.Title = "Afficher la photo";
+}
+
+<h2>@Model.Title</h2>
+
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(m => m.Description)</dt>
+    <dd>@Html.DisplayFor(m => m.Description)</dd>
+
+    <dt>@Html.DisplayNameFor(m => m.Author)</dt>
+    <dd>@Html.DisplayFor(m => m.Author)</dd>
+</dl>
