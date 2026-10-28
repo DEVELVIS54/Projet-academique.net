@@ -1,0 +1,1 @@
+﻿insert into dbo.db1()
