@@ -1,15 +1,20 @@
 ﻿@model TEST1WEB.Models.Photo
 
 @{
-    ViewBag.Title = "Afficher la photo";
+    ViewBag.Title = Model.Title;
 }
 
-<h2>@Model.Title</h2>
+<link href="~/Content/photo.css" rel="stylesheet" />
 
-<dl class="dl-horizontal">
-    <dt>@Html.DisplayNameFor(m => m.Description)</dt>
-    <dd>@Html.DisplayFor(m => m.Description)</dd>
-
-    <dt>@Html.DisplayNameFor(m => m.Author)</dt>
-    <dd>@Html.DisplayFor(m => m.Author)</dd>
-</dl>
+<article class="fiche">
+    <figure class="cadre">
+        <div class="image" role="img" aria-label="Emplacement de la photo : @Model.Title">
+            <span>Aucune image associée</span>
+        </div>
+        <figcaption>
+            <h1 class="titre">@Model.Title</h1>
+            <p class="description">@Model.Description</p>
+            <p class="credit">Photo de <strong>@Model.Author</strong></p>
+        </figcaption>
+    </figure>
+</article>
